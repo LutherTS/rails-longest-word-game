@@ -1,0 +1,14 @@
+<h1>Games#score</h1>
+<p>Find me in app/views/games/score.html.erb</p>
+
+<% if @include == false %>
+<p>Sorry but <b><%=@response.upcase%></b> can't be built out of <%=@letters%>.</p>
+<% elsif @english_word == false %>
+<p>Sorry but <b><%=@response.upcase%></b> does not seem to be a valid English word...</p>
+<% else %>
+<p><b>Congratulations!</b> <%=@response.upcase%> is a valid English word!</p>
+<% end %>
+
+<%#= result %>
+
+<p><%= link_to "Try again...", new_path %></p>
